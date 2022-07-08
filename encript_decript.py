@@ -73,18 +73,18 @@ characterMap = {
 }
 
 
-def encript(key, map):
+def encript(key):
     encripted = ""
     for i in range(len(key)):
         try:
-            encripted += f"{map[key[i]]}"
+            encripted += f"{characterMap[key[i]]}"
         except:
             return f"{key[i]} cant encode"
 
     return encripted
 
 
-def decript(key, map):
+def decript(key):
     decripted = ""
     n = 0
     while(n < len(key)): 
@@ -98,5 +98,5 @@ def decript(key, map):
         
     return decripted
 
-print(encript("Hello, world!", characterMap))
-print(decript("17556262653736736568625481", characterMap))
+print(encript("Hello, world!"))
+print(decript("17556262653736736568625481"))
